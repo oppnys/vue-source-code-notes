@@ -38,7 +38,7 @@ Vue.prototype.$mount = function (
     // 判断options中有没有 template 属性
     let template = options.template
     if (template) { //如果存在 template 属性
-      if (typeof template === 'string') {
+      if (typeof template === 'string') {  //如果存在 template 属性
         if (template.charAt(0) === '#') {
           template = idToTemplate(template)
           /* istanbul ignore if */
@@ -49,7 +49,7 @@ Vue.prototype.$mount = function (
             )
           }
         }
-      } else if (template.nodeType) {
+      } else if (template.nodeType) { //如果 template HTML节点
         template = template.innerHTML
       } else {
         if (process.env.NODE_ENV !== 'production') {
