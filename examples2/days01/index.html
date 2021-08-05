@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="../../dist/vue.js"></script>
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  {{msg}}
+</div>
+<script>
+  console.log(Vue)
+  const app = new Vue({
+    el: '#app',
+    data() {
+      return {
+        msg: 'hello vue',
+      }
+    },
+    template: `<h4>{{this.msg}}</h4>`
+  })
+  console.log(app)
+</script>
+</body>
+</html>
