@@ -147,6 +147,10 @@ function mergeHook (
   parentVal: ?Array<Function>,
   childVal: ?Function | ?Array<Function>
 ): ?Array<Function> {
+  // 如果 childVal 不存在，返回 parenVal
+  // 如果 childVal 存在并且 parentVal 两个数组拼接
+  // 如果 childVal 存在并且 parentVal 不存在，
+  //     判断childVal 是否为数组，如果是数组直接返回，不是数组转换成数组
   const res = childVal
     ? parentVal
       ? parentVal.concat(childVal)
