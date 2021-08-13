@@ -432,8 +432,10 @@ export function mergeOptions (
     }
   }
   function mergeField (key) {
+
     const strat = strats[key] || defaultStrat
     options[key] = strat(parent[key], child[key], vm, key)
+    // options.created = [fn1, fn2]
   }
   return options
 }
